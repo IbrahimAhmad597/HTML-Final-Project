@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-image: url('images/header1.webp');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    color: white;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0;
+    padding-right: 75px;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.title {
+    font-size: 80px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.subtittle {
+    font-size: 40px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
