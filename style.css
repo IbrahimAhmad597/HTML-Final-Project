@@ -4,7 +4,35 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 40px;
+    box-sizing: border-box;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.nav-links {
+    padding-right: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+nav a:hover {
+    color: rgb(128, 128, 128);
+}
+
 header {
+    position: relative;
     background-image: url('images/header.webp');
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -26,7 +54,7 @@ header {
 }
 
 .subtittle {
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
