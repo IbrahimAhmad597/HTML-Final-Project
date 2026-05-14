@@ -2,11 +2,15 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Parking Pizza</title>
 </head>
 
 <body>
+    <canvas id="c"></canvas>
     <nav>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -41,12 +45,311 @@
 
             <button type="submit">Submit Form</button>
         </form>
+
+          <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> 123 Pizza Street, Boston, MA 02110</p>
+            <p><strong>Email:</strong> <a href="mailto:pizza@parkingpiza.com">pizza@parkingpiza.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:0000000000">S(000)-000-0000</a></p>
+          </section>
     </main>
 
     <script src="https://web3forms.com/client/script.js" async defer></script>
+   
+//AI generated code as a background
+   <script>
+const cv = document.getElementById('c');
+const cx = cv.getContext('2d');
+let W, H;
+
+function resize(){
+  W = cv.width  = window.innerWidth;
+  H = cv.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// 1. BASIL LEAF – organic teardrop with veins
+function drawBasil(cx, x, y, a, s){
+  cx.save();
+  cx.translate(x,y); cx.rotate(a); cx.scale(s,s);
+
+  const g = cx.createRadialGradient(-3,-8,1,0,0,18);
+  g.addColorStop(0,'#5aaa3a');
+  g.addColorStop(0.5,'#3d8c28');
+  g.addColorStop(1,'#2a6118');
+  cx.beginPath();
+  cx.moveTo(0,16);
+  cx.bezierCurveTo(12,8, 16,-4, 6,-14);
+  cx.bezierCurveTo(2,-18, -2,-18, -6,-14);
+  cx.bezierCurveTo(-16,-4, -12,8, 0,16);
+  cx.fillStyle=g; cx.fill();
+
+  // midrib
+  cx.beginPath(); cx.moveTo(0,16); cx.lineTo(0,-16);
+  cx.strokeStyle='rgba(30,70,10,0.55)'; cx.lineWidth=0.8; cx.stroke();
+  // veins
+  for(let i=-1;i<=1;i+=2){
+    cx.beginPath(); cx.moveTo(0,4); cx.lineTo(i*9,-3);
+    cx.moveTo(0,-3); cx.lineTo(i*8,-10);
+    cx.strokeStyle='rgba(30,70,10,0.35)'; cx.lineWidth=0.5; cx.stroke();
+  }
+  cx.restore();
+}
+
+// 2. MOZZARELLA CHUNK – irregular white blob
+function drawMozzarella(cx, x, y, a, s){
+  cx.save();
+  cx.translate(x,y); cx.rotate(a); cx.scale(s,s);
+
+  const g = cx.createRadialGradient(-4,-5,1,0,0,16);
+  g.addColorStop(0,'#fffff8');
+  g.addColorStop(0.5,'#f2ede0');
+  g.addColorStop(1,'#ddd5c0');
+
+  cx.beginPath();
+  cx.moveTo(0,-14);
+  cx.bezierCurveTo(10,-14, 16,-8, 15,0);
+  cx.bezierCurveTo(16,9, 10,14, 2,15);
+  cx.bezierCurveTo(-6,16, -15,10, -14,2);
+  cx.bezierCurveTo(-16,-7, -10,-14, 0,-14);
+  cx.fillStyle=g; cx.fill();
+
+  // subtle surface texture lines
+  cx.strokeStyle='rgba(180,170,155,0.4)'; cx.lineWidth=0.7;
+  cx.beginPath(); cx.moveTo(-6,-6); cx.bezierCurveTo(-2,-3,4,-3,8,-6); cx.stroke();
+  cx.beginPath(); cx.moveTo(-8,2); cx.bezierCurveTo(-2,5,5,5,9,2); cx.stroke();
+  cx.restore();
+}
+
+// 3. TOMATO SLICE – red circle with seed pockets
+function drawTomato(cx, x, y, a, s){
+  cx.save();
+  cx.translate(x,y); cx.rotate(a); cx.scale(s,s);
+
+  cx.beginPath(); cx.arc(0,0,15,0,Math.PI*2);
+  cx.fillStyle='#c82020'; cx.fill();
+  cx.strokeStyle='#8b1010'; cx.lineWidth=1.2; cx.stroke();
+
+  const g = cx.createRadialGradient(0,0,1,0,0,14);
+  g.addColorStop(0,'rgba(230,80,60,0.8)');
+  g.addColorStop(1,'rgba(180,30,20,0.3)');
+  cx.beginPath(); cx.arc(0,0,14,0,Math.PI*2);
+  cx.fillStyle=g; cx.fill();
+
+  cx.strokeStyle='rgba(100,10,5,0.45)'; cx.lineWidth=0.7;
+  for(let i=0;i<3;i++){
+    const ang=i*(Math.PI*2/3);
+    cx.beginPath(); cx.moveTo(0,0); cx.lineTo(Math.cos(ang)*14,Math.sin(ang)*14); cx.stroke();
+  }
+  for(let i=0;i<6;i++){
+    const ang=i*(Math.PI*2/6)+0.3; const r=7;
+    cx.save(); cx.translate(Math.cos(ang)*r, Math.sin(ang)*r); cx.rotate(ang);
+    cx.beginPath(); cx.ellipse(0,0,2.5,1.2,0,0,Math.PI*2);
+    cx.fillStyle='rgba(255,230,150,0.85)'; cx.fill(); cx.restore();
+  }
+  cx.restore();
+}
+
+// 4. PEPPERONI – cured meat disc with fat spots
+function drawPepperoni(cx, x, y, a, s){
+  cx.save();
+  cx.translate(x,y); cx.rotate(a); cx.scale(s,s);
+
+  const g = cx.createRadialGradient(-3,-3,1,0,0,15);
+  g.addColorStop(0,'#c43020'); g.addColorStop(0.6,'#a02018'); g.addColorStop(1,'#6e140e');
+  cx.beginPath(); cx.arc(0,0,14,0,Math.PI*2); cx.fillStyle=g; cx.fill();
+  cx.strokeStyle='#4a0c08'; cx.lineWidth=0.8; cx.stroke();
+
+  const spots=[[-5,-4,2.2],[ 4,-6,1.6],[-2,5,1.8],[6,3,1.4],[-7,3,1.2],[2,-1,1.0]];
+  for(const [sx,sy,sr] of spots){
+    cx.beginPath(); cx.arc(sx,sy,sr,0,Math.PI*2);
+    cx.fillStyle='rgba(255,220,160,0.7)'; cx.fill();
+  }
+  cx.beginPath(); cx.arc(0,0,13,Math.PI*1.1,Math.PI*1.6);
+  cx.strokeStyle='rgba(255,180,120,0.25)'; cx.lineWidth=2; cx.stroke();
+  cx.restore();
+}
+
+// 5. MUSHROOM – top-down slice view
+function drawMushroom(cx, x, y, a, s){
+  cx.save();
+  cx.translate(x,y); cx.rotate(a); cx.scale(s,s);
+
+  const g = cx.createRadialGradient(-3,-5,1,0,0,15);
+  g.addColorStop(0,'#c8a87a'); g.addColorStop(0.6,'#a0845a'); g.addColorStop(1,'#6e5a3a');
+  cx.beginPath(); cx.ellipse(0,-3,13,10,0,0,Math.PI*2); cx.fillStyle=g; cx.fill();
+
+  cx.strokeStyle='rgba(80,55,30,0.45)'; cx.lineWidth=0.6;
+  for(let i=0;i<8;i++){
+    const ang=i*(Math.PI/4);
+    cx.beginPath(); cx.moveTo(0,-3); cx.lineTo(Math.cos(ang)*11+0,Math.sin(ang)*8-3); cx.stroke();
+  }
+  cx.beginPath(); cx.ellipse(0,6,4,6,0,0,Math.PI*2);
+  cx.fillStyle='#b8967a'; cx.fill();
+  cx.strokeStyle='rgba(80,50,30,0.3)'; cx.lineWidth=0.5; cx.stroke();
+  cx.restore();
+}
+
+// 6. BLACK OLIVE – ring slice
+function drawOlive(cx, x, y, a, s){
+  cx.save();
+  cx.translate(x,y); cx.rotate(a); cx.scale(s,s);
+
+  cx.beginPath(); cx.ellipse(0,0,12,9,0,0,Math.PI*2);
+  cx.fillStyle='#1e1a14'; cx.fill();
+  cx.strokeStyle='#3a3222'; cx.lineWidth=0.8; cx.stroke();
+
+  cx.beginPath(); cx.ellipse(0,0,5,4,0,0,Math.PI*2);
+  cx.fillStyle='#17181c'; cx.fill();
+
+  cx.beginPath(); cx.ellipse(0,0,11,8,-0.2,Math.PI*1.05,Math.PI*1.45);
+  cx.strokeStyle='rgba(120,100,70,0.4)'; cx.lineWidth=2; cx.stroke();
+  cx.restore();
+}
+
+// 7. BELL PEPPER STRIP – curved colorful strip
+function drawPepper(cx, x, y, a, s, hue){
+  cx.save();
+  cx.translate(x,y); cx.rotate(a); cx.scale(s,s);
+
+  const colors={
+    red:  {fill:'#e83030', hi:'#ff7070', shadow:'#901010'},
+    yellow:{fill:'#e8c020', hi:'#ffe060', shadow:'#907010'},
+    green: {fill:'#30a830', hi:'#70e070', shadow:'#105010'},
+  };
+  const c = colors[hue]||colors.red;
+
+  cx.beginPath();
+  cx.moveTo(-12,-5);
+  cx.bezierCurveTo(-8,-12, 8,-12, 12,-5);
+  cx.bezierCurveTo(14,0, 14,6, 10,9);
+  cx.bezierCurveTo(6,10, -6,10, -10,9);
+  cx.bezierCurveTo(-14,6, -14,0, -12,-5);
+  cx.fillStyle=c.fill; cx.fill();
+  cx.strokeStyle=c.shadow; cx.lineWidth=0.7; cx.stroke();
+
+  cx.beginPath();
+  cx.moveTo(-7,-8); cx.bezierCurveTo(-2,-11, 4,-11, 8,-8);
+  cx.strokeStyle=c.hi; cx.lineWidth=1.5;
+  cx.globalAlpha=0.5; cx.stroke();
+  cx.restore();
+}
+
+// 8. OREGANO FLAKE – tiny irregular green/brown speck
+function drawOregano(cx, x, y, a, s){
+  cx.save();
+  cx.translate(x,y); cx.rotate(a); cx.scale(s,s);
+  cx.beginPath();
+  cx.moveTo(0,-4);
+  cx.bezierCurveTo(3,-3,4,0,3,3);
+  cx.bezierCurveTo(1,5,-3,4,-3,2);
+  cx.bezierCurveTo(-5,-1,-3,-4,0,-4);
+  cx.fillStyle=Math.random()<0.5?'#5a7a30':'#7a6030';
+  cx.fill();
+  cx.restore();
+}
+
+const TYPES = ['basil','mozzarella','tomato','pepperoni','mushroom','olive','pepper','oregano'];
+const PEPPER_HUES = ['red','yellow','green'];
+
+const COUNTS = {
+  basil:12, mozzarella:10, tomato:9, pepperoni:10,
+  mushroom:9, olive:10, pepper:12, oregano:35,
+};
+
+function randRange(a,b){ return a + Math.random()*(b-a); }
+
+function mkParticle(type, fromTop=false){
+  const scaleMap = {
+    basil:randRange(0.7,1.3), mozzarella:randRange(0.8,1.4),
+    tomato:randRange(0.55,0.9), pepperoni:randRange(0.55,0.85),
+    mushroom:randRange(0.6,1.0), olive:randRange(0.55,0.9),
+    pepper:randRange(0.55,0.9), oregano:randRange(0.5,1.0),
+  };
+  return {
+    type,
+    x: randRange(-30, W+30),
+    y: fromTop ? randRange(-120,-20) : randRange(-H*1.2,-20),
+    scale: scaleMap[type],
+    angle: randRange(0, Math.PI*2),
+    spin:  randRange(-0.022, 0.022),
+    vy:    randRange(0.7, 2.0),
+    vx:    randRange(-0.5, 0.5),
+    sway:  randRange(0, Math.PI*2),
+    swayAmp: randRange(0.2, 0.9),
+    swayFreq: randRange(0.008, 0.022),
+    alpha: randRange(0.72, 1.0),
+    pepperHue: PEPPER_HUES[Math.floor(Math.random()*3)],
+  };
+}
+
+const particles = [];
+for(const type of TYPES){
+  const count = COUNTS[type];
+  for(let i=0;i<count;i++) particles.push(mkParticle(type));
+}
+
+function drawParticle(p){
+  cx.save();
+  cx.globalAlpha = p.alpha;
+  switch(p.type){
+    case 'basil':      drawBasil(cx, p.x, p.y, p.angle, p.scale); break;
+    case 'mozzarella': drawMozzarella(cx, p.x, p.y, p.angle, p.scale); break;
+    case 'tomato':     drawTomato(cx, p.x, p.y, p.angle, p.scale); break;
+    case 'pepperoni':  drawPepperoni(cx, p.x, p.y, p.angle, p.scale); break;
+    case 'mushroom':   drawMushroom(cx, p.x, p.y, p.angle, p.scale); break;
+    case 'olive':      drawOlive(cx, p.x, p.y, p.angle, p.scale); break;
+    case 'pepper':     drawPepper(cx, p.x, p.y, p.angle, p.scale, p.pepperHue); break;
+    case 'oregano':    drawOregano(cx, p.x, p.y, p.angle, p.scale); break;
+  }
+  cx.restore();
+}
+
+function drawBackground(){
+  cx.fillStyle = '#17181c';
+  cx.fillRect(0,0,W,H);
+
+  const bloom = cx.createRadialGradient(W*0.5, H*0.42, 0, W*0.5, H*0.42, Math.max(W,H)*0.55);
+  bloom.addColorStop(0, 'rgba(180,90,20,0.07)');
+  bloom.addColorStop(1, 'rgba(0,0,0,0)');
+  cx.fillStyle = bloom;
+  cx.fillRect(0,0,W,H);
+}
+
+const scaleEdge = { basil:22, mozzarella:22, tomato:18, pepperoni:18,
+                    mushroom:18, olive:16, pepper:18, oregano:8 };
+
+function tick(){
+  drawBackground();
+
+  for(const p of particles){
+    p.sway  += p.swayFreq;
+    p.x     += p.vx + Math.sin(p.sway)*p.swayAmp;
+    p.y     += p.vy;
+    p.angle += p.spin;
+
+    const edge = (scaleEdge[p.type]||18) * p.scale + 10;
+    if(p.y > H + edge){
+      const fresh = mkParticle(p.type, true);
+      fresh.x = randRange(-30, W+30);
+      Object.assign(p, fresh);
+    }
+    if(p.x < -80) p.x = W+80;
+    if(p.x > W+80) p.x = -80;
+
+    drawParticle(p);
+  }
+
+  requestAnimationFrame(tick);
+}
+tick();
+    </script>
+
+//End of AI generated background code
+    <footer>
+        <p>Copyright &#169; 2026 Ibrahim Ahmad. All rights reserved.</p>
+    </footer>
 </body>
-<footer>
-    <p>Copyright &#169; 2026 Ibrahim Ahmad. All rights reserved.</p>
-</footer>
 
 </html>
